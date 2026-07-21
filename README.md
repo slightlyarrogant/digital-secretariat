@@ -39,6 +39,7 @@ Product message: **One company. One client interface. No invisible promises.** S
 
 - [Architecture](docs/ARCHITECTURE.md)
 - [Positioning and sales message](docs/POSITIONING.md)
+- [Hackathon submission](docs/SUBMISSION.md)
 - [English-only language policy](docs/LANGUAGE_POLICY.md)
 - [Manual installation](docs/INSTALLATION.md)
 - [AI-led installation](docs/ai/README.md)

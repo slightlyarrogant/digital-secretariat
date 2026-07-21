@@ -1,4 +1,6 @@
 import sqlite3
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 from src.secretariat.outreach import read_outreach
 
@@ -15,14 +17,23 @@ def test_outreach_projection_uses_campaign_outcomes_without_fabricating_opens(tm
         CREATE TABLE leads (
             reply_classification TEXT, reply_account TEXT, reply_date DATETIME
         );
-        INSERT INTO email_campaigns VALUES
-            ('launch', 'a', datetime('now'), datetime('now'), NULL, NULL, 'replied'),
-            ('launch', 'a', datetime('now'), NULL, NULL, NULL, 'sent'),
-            ('launch', 'b', datetime('now'), NULL, datetime('now'), NULL, 'sent');
-        INSERT INTO leads VALUES
-            ('human_reply', NULL, datetime('now')),
-            ('REGISTRATION', 'registration', datetime('now'));
         """
+    )
+    now = datetime.now(ZoneInfo("Europe/Warsaw")).replace(tzinfo=None)
+    connection.executemany(
+        "INSERT INTO email_campaigns VALUES (?, ?, ?, ?, ?, ?, ?)",
+        [
+            ("launch", "a", now, now, None, None, "replied"),
+            ("launch", "a", now, None, None, None, "sent"),
+            ("launch", "b", now, None, now, None, "sent"),
+        ],
+    )
+    connection.executemany(
+        "INSERT INTO leads VALUES (?, ?, ?)",
+        [
+            ("human_reply", None, now),
+            ("REGISTRATION", "registration", now),
+        ],
     )
     connection.commit()
     connection.close()

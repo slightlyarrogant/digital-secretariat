@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "remotion studio",
-    "render": "remotion render ProductFilmPL out/digital-secretariat-pl.mp4 --codec=h264 --crf=18"
+    "render": "remotion render ProductFilmEN out/digital-secretariat-en.mp4 --codec=h264 --crf=18"
   },
   "dependencies": {
     "@remotion/cli": "4.0.246",

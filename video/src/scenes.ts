@@ -10,28 +10,32 @@ export const SCENES = {
   approval: { from: 1260, len: 390 },
   commitment: { from: 1650, len: 330 },
   shared: { from: 1980, len: 240 },
-  closing: { from: 2220, len: 180 },
+  closing: { from: 2220, len: 270 },
 } as const;
+
+// Voiceover segment start times (seconds) — measured against the rendered
+// ElevenLabs takes in public/audio/vo/. Captions below follow these anchors.
+export const VO_STARTS = [0.3, 9.18, 19.44, 29.51, 42.0, 55.0, 66.0, 74.0];
 
 // Burned-in captions: phrase-level lines from VOICEOVER.md, max 2 lines.
 export const CAPTIONS: Cue[] = [
   { from: 10, to: 112, lines: ['An AI-operated company can communicate', 'faster than it coordinates.'] },
   { from: 118, to: 232, lines: ['A legacy job, a new agent, and a human may', 'each tell the same client something different.'] },
-  { from: 252, to: 372, lines: ['That is how accidental emails leave and a', 'fourteen-message thread stays invisible…'] },
-  { from: 378, to: 530, lines: ['…and a promised Friday deadline becomes an', 'obligation nobody owns or even knows exists.'] },
-  { from: 552, to: 660, lines: ['The most important interface in an AI company', 'is not the model.'] },
-  { from: 666, to: 768, lines: ['It is the boundary between', 'the company and its clients.'] },
-  { from: 774, to: 860, lines: ['Digital Secretariat controls that boundary.'] },
-  { from: 885, to: 1048, lines: ['Every inbound message arrives with shared context:', 'sender, mailbox, content, attachments…'] },
-  { from: 1054, to: 1248, lines: ['…relationship, and current company state.', 'Every agent starts from the same evidence.'] },
+  { from: 282, to: 402, lines: ['That is how accidental emails leave and a', 'fourteen-message thread stays invisible…'] },
+  { from: 408, to: 575, lines: ['…and a promised Friday deadline becomes an', 'obligation nobody owns or even knows exists.'] },
+  { from: 597, to: 705, lines: ['The most important interface in an AI company', 'is not the model.'] },
+  { from: 711, to: 813, lines: ['It is the boundary between', 'the company and its clients.'] },
+  { from: 819, to: 878, lines: ['Digital Secretariat controls that boundary.'] },
+  { from: 900, to: 1063, lines: ['Every inbound message arrives with shared context:', 'sender, mailbox, content, attachments…'] },
+  { from: 1069, to: 1243, lines: ['…relationship, and current company state.', 'Every agent starts from the same evidence.'] },
   { from: 1272, to: 1358, lines: ['Outbound communication follows one rail.'] },
   { from: 1364, to: 1478, lines: ['The reviewed revision, recipient, and thread', 'come from trusted data.'] },
   { from: 1484, to: 1638, lines: ['A newer message stops a stale reply.', 'Nothing counts as sent without evidence.'] },
   { from: 1662, to: 1758, lines: ['A promise does not disappear inside email.'] },
   { from: 1764, to: 1965, lines: ['It becomes an owned obligation with a deadline,', 'next action, and link to the conversation.'] },
   { from: 1992, to: 2205, lines: ['Response time, delivery, bounces, outreach, and', 'open commitments now describe one company.'] },
-  { from: 2232, to: 2308, lines: ['Digital Secretariat.', 'The client interface for AI-operated companies.'] },
-  { from: 2314, to: 2392, lines: ['One company. One client interface.', 'No invisible promises.'] },
+  { from: 2225, to: 2355, lines: ['Digital Secretariat.', 'The client interface for AI-operated companies.'] },
+  { from: 2362, to: 2480, lines: ['One company. One client interface.', 'No invisible promises.'] },
 ];
 
 // Deterministic demo fixtures — English only, fictional, example.com (brief requirement).

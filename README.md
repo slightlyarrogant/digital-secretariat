@@ -10,6 +10,36 @@ not yet a universal one-command SaaS installer. The UI and security boundary are
 company still needs a reviewed adapter mapping its source database, mailboxes, and outbound rail to
 the contracts in this repository.
 
+## How we used Codex and GPT-5.6
+
+### Codex
+
+We used Codex as an engineering partner, not only as a code generator. It inspected the existing
+company system and traced failures across the owner interface, PostgreSQL state, mail rail,
+Tailscale identity proxy, and systemd deployment. That investigation helped turn real incidents -
+including invisible client conversations, stale drafts, approval failures, and uncontrolled legacy
+send paths - into explicit product invariants.
+
+Codex then helped us extract the reusable control plane into this standalone repository, implement
+and debug the approval workflows, build focused regression tests, sanitize company-specific data,
+document the security model, and prepare CI, deployment, rollback, and AI-guided installation
+contracts. The installer design applies the same approach operationally: inspect an error, explain
+the diagnosis, request approval for consequential changes, rerun verification, and append evidence
+to the installation log.
+
+### GPT-5.6
+
+We used GPT-5.6 for bounded reasoning over unstructured client communication. It helped classify
+intent, identify missing or conflicting context, and prepare concise proposed replies using approved
+company knowledge and templates. This is the part of the workflow where language understanding is
+valuable; trusted addressing, revisions, permissions, and delivery remain deterministic.
+
+GPT-5.6 never becomes the final authority. Inbound messages and model output are treated as
+untrusted data. The model receives no SMTP capability, database write credential, shell, or secret
+store. Its proposal must pass deterministic validation and the same human approval rail as any
+other draft before an external message can be released. The public reference distribution excludes
+model credentials and company-specific orchestration while preserving this typed proposal boundary.
+
 ## Product rules
 
 1. A message is not sent unless the audited send log proves success.

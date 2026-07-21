@@ -2,9 +2,11 @@
 
 ## Goal
 
-Digital Secretariat gives the owner one private place to see what requires attention, inspect the
-underlying evidence, and make an auditable decision. It is a control plane over existing systems,
-not a second ERP and not an autonomous email bot.
+Digital Secretariat gives an AI-operated company one controlled interface to its clients. Every
+agent and operator must work from the same inbound evidence, outbound decision rail, and explicit
+set of commitments. The owner gets one private place to see what requires attention and make an
+auditable decision. It is a control plane over existing systems, not a second ERP and not an
+autonomous email bot.
 
 ## Modules
 

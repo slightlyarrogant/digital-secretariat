@@ -1,34 +1,47 @@
 # Shot list and production checklist
 
+## Language gate
+
+- Every UI label, title, email example, case, deadline, caption, voiceover line, filename, and piece of
+  metadata must be English.
+- Non-English product text blocks capture and release. Do not hide it with a crop.
+- Customer-language support belongs in separate localization demonstrations, not this master film.
+
 ## Before recording
 
-- Seed fictional companies, messages, obligations, campaign metrics, and delivery states.
-- Include one normal reply, one blocked stale reply, one bounced message, and one automatic invoice.
+- Seed one fictional English client thread with fourteen messages and two conflicting proposed
+  commitments.
+- Include one hidden legacy send, one blocked stale reply, one missed deadline, one successful
+  approved reply, and one source-linked obligation.
 - Freeze timestamps to one coherent business day.
 - Disable desktop notifications, password managers, browser extensions, and unrelated services.
-- Verify every visible email uses `example.com` and every phone/name is fictional.
-- Record clean UI at 60 fps; Remotion master remains 30 fps for flexible retiming.
+- Verify every address uses `example.com` and every person, company, phone, and domain is fictional.
+- Record clean UI at 60 fps; the Remotion master remains 30 fps for flexible retiming.
 
 ## Directing the UI
 
 | Take | Start state | Action | End state | Maximum length |
 |---|---|---|---|---:|
-| Today | full workspace | attention items settle from 12 to 3 | top decision focused | 8 s |
-| Inbox | collapsed inbound row | single click expands | content and metadata visible | 6 s |
-| Reply | expanded message | type two short sentences, approve | processing notice | 9 s |
-| Evidence | pending draft | status refresh | `sent` plus send-log proof | 5 s |
-| Metrics | performance view | period comparison reveals | trend and funnel readable | 8 s |
-| Mobile | same inbox state | one thumb scroll | reply controls visible | 6 s |
-| Installer | failed preflight | inspect, approved fix, rerun | green check and log append | 10 s |
+| Conflict | same client in three communication paths | legacy process sends while another agent proposes different terms | contradiction is visible | 8 s |
+| Consequence | fourteen-message thread | reveal promised Friday date and empty Cases search | invisible obligation is undeniable | 7 s |
+| Inbound | collapsed English row | single click expands | message, mailbox, attachments, and relationship visible | 7 s |
+| Approval | expanded message | type explicit date and approve | canonical rail processing notice | 10 s |
+| Evidence | pending draft | status refresh | sent state plus matching send-log proof | 5 s |
+| Commitment | sent response | open source-linked case | owner, deadline, and next action visible | 8 s |
+| Shared state | operational workspace | switch through Cases and Performance | one company-wide view | 7 s |
+| Mobile | same decision state | one thumb scroll | English action controls visible | 5 s |
 
-Keep the pointer still before and after every action. Do not show frantic clicking. Each shot should
-have one visual verb.
+Keep the pointer still before and after every action. Each shot must have one visual verb. The
+conflict must be understandable without narration; the resolution must be proven by product state,
+not a floating slogan.
 
 ## Final review
 
-- Product name appears in the first six seconds and the final frame.
-- The film shows a real email body, real approval action, and real evidence of delivery.
-- Charts communicate change over time, not decorative KPI numerals.
-- The installation scene shows an error being diagnosed, not magically disappearing.
-- Tailscale is described as private access, not as the whole security model.
-- No scene implies autonomous external sending.
+- The product name and English category appear by 29 seconds and in the final frame.
+- The first eighteen seconds make the commercial risk concrete: accidental communication, an
+  invisible promise, and a missed obligation.
+- The product proves one inbound register, one approval rail, one send record, and one shared case.
+- The film never claims that all legacy channels are automatically intercepted today.
+- The promise-to-obligation shot uses an implemented flow or is visibly labelled as a proposal.
+- Installation AI is absent from the master sales film and reserved for a separate technical video.
+- No scene implies unsupervised external sending.

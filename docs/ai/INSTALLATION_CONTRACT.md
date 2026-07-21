@@ -49,6 +49,7 @@ Approvals are specific and expire when the plan changes materially.
 | SMTP failure | visible failed draft, no false success |
 | Internal mail success | send log and message threading evidence agree |
 | Rollback | previous release restores and becomes ready |
+| Product language | all product-owned UI, installer, demo, and support output is English |
 
 ## Stop conditions
 

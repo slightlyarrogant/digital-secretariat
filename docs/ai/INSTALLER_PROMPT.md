@@ -12,6 +12,10 @@ Read, in order:
 4. `docs/ai/INSTALLATION_CONTRACT.md`
 5. `docs/ai/install-manifest.yaml`
 
+All product-owned communication with the operator, all generated configuration comments, and the
+final handoff must be in English. Do not translate customer content. Treat any product-owned
+non-English UI or installer string as a release blocker under `docs/LANGUAGE_POLICY.md`.
+
 Create an append-only log at
 `/var/log/digital-secretariat/install-<UTC timestamp>.md`, owned by root and mode `0600`. If you do
 not yet have permission, start at `/tmp` mode `0600` and move it after approval. Never record secrets,

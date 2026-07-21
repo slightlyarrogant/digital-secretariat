@@ -1,0 +1,1 @@
+"""Digital Secretariat application package."""

@@ -1,0 +1,68 @@
+schema_version: 1
+product: digital-secretariat
+release: 0.1.0
+principles:
+  - fail_closed
+  - no_secrets_in_git_chat_or_logs
+  - no_external_mail_during_install
+  - no_guessed_data_mapping
+  - append_only_install_log
+stages:
+  - id: discovery
+    mutates: false
+    commands:
+      - ./scripts/preflight.sh
+    evidence:
+      - host_inventory
+      - source_system_inventory
+      - backup_status
+      - rollback_options
+  - id: host_prepare
+    gate: G1
+    evidence:
+      - python_3_11
+      - dedicated_service_user
+      - pinned_dependencies
+  - id: data_adapter
+    gate: G2
+    evidence:
+      - schema_probe
+      - sql_hashes
+      - disposable_database_tests
+      - least_privilege_audit
+  - id: read_only_runtime
+    gate: G1
+    evidence:
+      - clean_release_sha
+      - localhost_listener
+      - health_live
+      - health_ready
+  - id: private_access
+    gate: G3
+    evidence:
+      - tailscale_policy_diff
+      - allowed_owner_test
+      - denied_identity_test
+      - direct_http_401
+  - id: actions
+    gate: G4
+    evidence:
+      - signed_action_test
+      - stale_revision_test
+      - outbound_freeze_test
+  - id: internal_mail_e2e
+    gate: G5
+    evidence:
+      - internal_recipient_only
+      - draft_revision
+      - send_log_id
+      - smtp_message_id
+      - threading_headers
+  - id: acceptance
+    mutates: false
+    commands:
+      - ./scripts/verify-install.sh
+    evidence:
+      - acceptance_matrix
+      - rollback_test
+      - sanitized_handoff

@@ -1,0 +1,8 @@
+APP_USER=secretariat
+APP_GROUP=secretariat
+INSTALL_ROOT=/opt/digital-secretariat
+CONFIG_ROOT=/etc/digital-secretariat
+PORT=8040
+PYTHON=/opt/digital-secretariat/venv/bin/python
+# Space-separated IP/CIDR destinations. Resolve and review provider IPs before deploy.
+SMTP_IP_ALLOW="192.0.2.10"

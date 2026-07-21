@@ -1,44 +1,32 @@
-# Voiceover script — English master (80 seconds)
+# Voiceover script - English master (60 seconds)
 
-Delivery: calm, precise, and consequential. The opening should feel like a governance problem, not a
-movie trailer. Target pace: approximately 150 words per minute.
+Delivery: direct, confident, and natural. Target pace: approximately 150 words per minute.
 
-## 0-8 s
+## 0-12 s
 
-**An AI-operated company can communicate faster than it coordinates. A legacy job, a new agent, and
-a human may each tell the same client something different.**
+**We built Digital Secretariat, a communication control plane for AI-operated companies. It brings
+inbound email, client context, response drafts, approvals, commitments, deadlines, and delivery
+evidence into one private workspace.**
 
-## 8-18 s
+## 12-24 s
 
-**That is how accidental emails leave, a fourteen-message thread stays invisible, and a promised
-Friday deadline becomes an obligation nobody owns or even knows exists.**
+**The problem came from our own operations. Old automations and new agents could contact the same
+client without sharing state. That created invisible conversations, promises nobody owned, and
+deadlines the company could not see.**
 
-## 18-29 s
+## 24-38 s
 
-**The most important interface in an AI company is not the model. It is the boundary between the
-company and its clients. Digital Secretariat controls that boundary.**
+**We used Codex as an engineering partner. It inspected the existing system, traced failures across
+the interface, database, mail rail, and deployment, then helped us extract, test, document, and
+productize the working architecture.**
 
-## 29-42 s
+## 38-50 s
 
-**Every inbound message arrives with shared context: sender, mailbox, content, attachments,
-relationship, and current company state. Every agent starts from the same evidence.**
+**We used GPT-5.6 to understand incoming communication, classify intent, identify missing context,
+and prepare concise replies using approved company knowledge and templates.**
 
-## 42-55 s
+## 50-60 s
 
-**Outbound communication follows one rail. The reviewed revision, recipient, and thread come from
-trusted data. A newer message stops a stale reply. Nothing counts as sent without evidence.**
-
-## 55-66 s
-
-**A promise does not disappear inside email. It becomes an owned obligation with a deadline, next
-action, and link to the conversation that created it.**
-
-## 66-74 s
-
-**Response time, delivery, bounces, outreach, and open commitments now describe one company, not
-disconnected automations.**
-
-## 74-80 s
-
-**Digital Secretariat. The client interface for AI-operated companies. One company. One client
-interface. No invisible promises.**
+**But the model is never the final authority. External messages pass through one controlled rail,
+with human approval, revision checks, and auditable delivery. Digital Secretariat: one company, one
+client interface, no invisible promises.**

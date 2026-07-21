@@ -3,8 +3,7 @@ import {AbsoluteFill, Series, useCurrentFrame} from 'remotion';
 import {loadFont} from '@remotion/google-fonts/Inter';
 import {SCENES, CAPTIONS} from './scenes';
 import {T, FPS} from './theme';
-import {SceneConflict, SceneConsequence, SceneReveal, SceneInbound} from './components/scenes1to4';
-import {SceneApproval, SceneCommitment, SceneShared, SceneClosing} from './components/scenes5to8';
+import {SceneOverview, SceneProblem, SceneCodex, SceneGPT, SceneRail} from './components/scenes60';
 
 const {fontFamily} = loadFont('normal', {weights: ['400', '600', '700', '800'], subsets: ['latin']});
 
@@ -40,29 +39,20 @@ export const ProductFilmEN: React.FC = () => {
   return (
     <AbsoluteFill style={{background: T.paper, fontFamily}}>
       <Series>
-        <Series.Sequence durationInFrames={SCENES.conflict.len} premountFor={FPS}>
-          <SceneConflict />
+        <Series.Sequence durationInFrames={SCENES.overview.len} premountFor={FPS}>
+          <SceneOverview />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={SCENES.consequence.len} premountFor={FPS}>
-          <SceneConsequence />
+        <Series.Sequence durationInFrames={SCENES.problem.len} premountFor={FPS}>
+          <SceneProblem />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={SCENES.reveal.len} premountFor={FPS}>
-          <SceneReveal />
+        <Series.Sequence durationInFrames={SCENES.codex.len} premountFor={FPS}>
+          <SceneCodex />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={SCENES.inbound.len} premountFor={FPS}>
-          <SceneInbound />
+        <Series.Sequence durationInFrames={SCENES.gpt.len} premountFor={FPS}>
+          <SceneGPT />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={SCENES.approval.len} premountFor={FPS}>
-          <SceneApproval />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={SCENES.commitment.len} premountFor={FPS}>
-          <SceneCommitment />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={SCENES.shared.len} premountFor={FPS}>
-          <SceneShared />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={SCENES.closing.len} premountFor={FPS}>
-          <SceneClosing />
+        <Series.Sequence durationInFrames={SCENES.rail.len} premountFor={FPS}>
+          <SceneRail />
         </Series.Sequence>
       </Series>
       <Captions />
